@@ -1,0 +1,102 @@
+$gridSize:140px;
+$gridSizeMobile:100px;
+$gridBgColor :hsl(204, 82%, 56%);
+$gridBgHoverColor :hsl(204, 82%, 40%);
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,$gridSize);
+    justify-content: center;
+    &.grid-container-disable{
+        // background-color: red !important;
+        pointer-events: none;
+    }
+
+    @media screen and (max-width:450px) {
+        grid-template-columns: repeat(3, $gridSizeMobile);
+    }
+
+}
+
+.alert {
+    width: 80%;
+    display: block;
+    margin: auto;
+    max-width:150px !important;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+.grid-container > div{
+    width: $gridSize; 
+    height: $gridSize;
+    max-width: $gridSize;
+    max-height: $gridSize;
+    background-color: $gridBgColor;
+    transition: all 0.1s linear;
+    &:not(.circle):not(.cross):hover{
+        background-color: $gridBgHoverColor;
+        cursor: pointer;
+        
+    }
+
+    @media screen and (max-width:450px){
+        width:$gridSizeMobile;
+        height: $gridSizeMobile;
+    }
+    
+     &.winning-bg{
+        background-color: green;
+     }
+    &.cross{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        pointer-events: none;
+        &::after{
+            content: '';
+            display: block;
+            width: 80%;
+            height: 10%;
+            background-color: #000;
+            transform: rotate(45deg);
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            width: 10%;
+            height: 80%;
+            background-color: #000;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+    }
+
+    &.circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        pointer-events: none;
+        &::after{
+            content: '';
+            display: block;
+            height: 80%;
+            width: 80%;
+            // background-color: #000;
+            border:10px solid black;
+            border-radius: 50%;
+        }
+
+
+
+    }
+// display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+}

@@ -1,0 +1,84 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  justify-content: center;
+}
+.grid-container.grid-container-disable {
+  pointer-events: none;
+}
+@media screen and (max-width: 450px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+
+.alert {
+  width: 80%;
+  display: block;
+  margin: auto;
+  max-width: 150px !important;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.grid-container > div {
+  width: 140px;
+  height: 140px;
+  max-width: 140px;
+  max-height: 140px;
+  background-color: hsl(204deg, 82%, 56%);
+  transition: all 0.1s linear;
+}
+.grid-container > div:not(.circle):not(.cross):hover {
+  background-color: hsl(204deg, 82%, 40%);
+  cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  .grid-container > div {
+    width: 100px;
+    height: 100px;
+  }
+}
+.grid-container > div.winning-bg {
+  background-color: green;
+}
+.grid-container > div.cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  pointer-events: none;
+}
+.grid-container > div.cross::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 10%;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+.grid-container > div.cross::before {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 80%;
+  background-color: #000;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.grid-container > div.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+.grid-container > div.circle::after {
+  content: "";
+  display: block;
+  height: 80%;
+  width: 80%;
+  border: 10px solid black;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
