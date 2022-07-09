@@ -27,7 +27,7 @@
   height: 140px;
   max-width: 140px;
   max-height: 140px;
-  background-color: hsl(204deg, 82%, 56%);
+  background-color: hsl(204deg, 68%, 60%);
   transition: all 0.1s linear;
 }
 .grid-container > div:not(.circle):not(.cross):hover {
@@ -81,4 +81,12 @@
   width: 80%;
   border: 10px solid black;
   border-radius: 50%;
+}
+
+a {
+  background-color: initial;
+  text-decoration: none;
+}
+a.github {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

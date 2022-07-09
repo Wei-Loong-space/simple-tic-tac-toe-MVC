@@ -1,6 +1,6 @@
 $gridSize:140px;
 $gridSizeMobile:100px;
-$gridBgColor :hsl(204, 82%, 56%);
+$gridBgColor :hsl(204, 68%, 60%);
 $gridBgHoverColor :hsl(204, 82%, 40%);
 
 
@@ -99,4 +99,13 @@ $gridBgHoverColor :hsl(204, 82%, 40%);
 //     justify-content: center;
 //     align-items: center;
 
+}
+
+a{
+    background-color: initial;
+    text-decoration: none;
+
+    &.github{
+        color: black;
+    }
 }
