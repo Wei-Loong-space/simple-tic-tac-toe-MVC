@@ -63,7 +63,7 @@ function stopGame() {
 function announceWinner(player = undefined) {
   const createAlert = document.createElement("div");
   createAlert.classList.add("alert", "alert-info");
-  createAlert.textContent = !player ? "Draw!" : `${player} won!`;
+  createAlert.textContent = !player ? "Draw!" : `${player} wins!`;
   gameBoard.append(createAlert);
 }
 
