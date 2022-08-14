@@ -87,3 +87,6 @@ restartBtn.addEventListener("click", () => {
     grid.classList.remove("cross", "circle", "winning-bg");
   });
 });
+
+
+
